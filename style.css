@@ -1,17 +1,17 @@
 html {
-	background: url(Eddahh.github.io/top5.jpg) no-repeat center center fixed; 
-    background-size: 100% 100%;
-	}
+	background: url(Eddahh.github.io/top5.jpg) no-repeat center center fixed;
+	background-size: 100% 100%;
+}
 
 body {
 	font-family: "Marker Felt","Comic Sans MS", fantasy;
 	color:#003366;
-    }
+}
 
 h1 {
 	font-size: 1.3em;
 	text-align:center;
-   	}
+}
 
 table {
 	margin-left:auto;
@@ -19,15 +19,15 @@ table {
 	text-align:left;
 	border-collapse: collapse;
 	cellspacing: 0 px;
-    }
+}
 
 td {
 	border: 1px solid #ffffff;
 	text-align:center; 
-    }
+}
 
 th {
 	text-align:center;
 	color:#ffffff;
 	background-color:#003366;
-    }
+}
