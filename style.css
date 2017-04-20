@@ -1,49 +1,11 @@
-html {
-	background: url(Eddahh.github.io/top5.jpg) no-repeat center center fixed;
-	background-size: 100% 100%;
-}
+img1popout {
+	z-index: 5;
+	position: absolute;
+	width: 550px;
+	height: 300px;
+	top: 50px;
+	border: 1px dashed #000099;
+	background-color: #ddddff;
+	}		
 
-body {
-	font-family: "Courier";
-	color:#000000;
-}
-
-h1 {
-	font-size: 2em;
-	text-align:center;
-}
-
-table {
-	margin-left:auto;
-	margin-right:auto;
-	text-align:left;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #808080;
-	border-collapse: collapse;
-}
-
-td {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #808080;
-	text-align:center; 
-}
-
-th {
-	text-align:center;
-	color:#ffffff;
-	background-color:#808080;
-}
-
-tr {
-	color:#000000;
-	background-color:#ffffff;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #808080;
-}
-
-a {
-	color: #ffffff;
-}
+img1popin{}
