@@ -1,4 +1,4 @@
-img1popout {
+#img1popout {
 	z-index: 5;
 	position: absolute;
 	width: 550px;
@@ -8,4 +8,4 @@ img1popout {
 	background-color: #ddddff;
 	}		
 
-img1popin {}
+#img1popin {}
