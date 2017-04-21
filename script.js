@@ -9,7 +9,6 @@ function showDetailedView() {
 			var popOut = document.getElementById("img1popout");
 			popOut.onmouseout = hideDetailedView; }
 
-
 function hideDetailedView() {
 			var im1 = document.getElementById("img1popout");
 			im1.id = "img1popin";
