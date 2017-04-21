@@ -1,4 +1,4 @@
-#img1popout {
+#pic1popout {
 	z-index: 5;
 	position: absolute;
 	width: 550px;
@@ -8,4 +8,64 @@
 	background-color: #ddddff;
 	}		
 
-#img1popin {}
+#pic1popin {}
+
+#pic2popout {
+	z-index: 5;
+	position: absolute;
+	width: 550px;
+	height: 300px;
+	top: 50px;
+	border: 1px dashed #000099;
+	background-color: #ddddff;
+	}		
+
+#pic2popin {}
+
+#pic3popout {
+	z-index: 5;
+	position: absolute;
+	width: 550px;
+	height: 300px;
+	top: 50px;
+	border: 1px dashed #000099;
+	background-color: #ddddff;
+	}		
+
+#pic3popin {}
+
+#pic4popout {
+	z-index: 5;
+	position: absolute;
+	width: 550px;
+	height: 300px;
+	top: 50px;
+	border: 1px dashed #000099;
+	background-color: #ddddff;
+	}		
+
+#pic4popin {}
+
+#pic5popout {
+	z-index: 5;
+	position: absolute;
+	width: 550px;
+	height: 300px;
+	top: 50px;
+	border: 1px dashed #000099;
+	background-color: #ddddff;
+	}		
+
+#pic5popin {}
+
+#pic6popout {
+	z-index: 5;
+	position: absolute;
+	width: 550px;
+	height: 300px;
+	top: 50px;
+	border: 1px dashed #000099;
+	background-color: #ddddff;
+	}		
+
+#pic6popin {}
