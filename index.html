@@ -1,99 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href = "style.css" rel = "stylesheet" type = "text/css"/>
-    <link href = "Eddahh.github.io/Sloth.jpg" rel = "icon" type = "image/x-icon"/>
-    <script type = 'text/javascript'>
-        function initPopout() {
+	<link href = "style.css" rel = "stylesheet" type = "text/css"/>
+        <link href = "Eddahh.github.io/Sloth.jpg" rel = "icon" type = "image/x-icon"/>
+        <meta charset = "utf-8" />
+        <title>We Meta Now</title>
+	<script type = "text/javascript">
+		function initPopout()
+		{
 			var thumb1 = document.getElementById("image1"); 
-			thumb1.onmouseover = showDetailedView; }
-            var thumb2 = documnet.getElementById('image2');
+			
+			thumb1.onmouseover = showDetailedView;
+		}
 
-        function showDetailedView() {
+		function showDetailedView()
+		{
 			var im1 = document.getElementById("img1popin");
 			im1.id = "img1popout";
 			im1.innerHTML = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Aprill Aronie<TR><TH align='left'>File Name: <TH align='left'>pic1.jpg<TR></TABLE> ";
 			var popOut = document.getElementById("img1popout");
-			popOut.onmouseout = hideDetailedView; }
+			popOut.onmouseout = hideDetailedView;			
+		}
 
-        function hideDetailedView() {
+		function hideDetailedView()
+		{
 			var im1 = document.getElementById("img1popout");
 			im1.id = "img1popin";
-            im1.innerHTML = ""; }
-        </script>
-    <meta charset = "utf-8" />
-    <title> We Meta Now </title>
-</head>
+			im1.innerHTML = "";
+		}
+		</script>
+	</head>
 <body onload="initPopout();">
-    <br>
-    <table>
-        <caption>Your Results:</caption>
-        <tbody>
-        <tr>
-            <td>
-                <img id="img1" src="aprilla/pic1thumb.jpg"><div id = "img1popin"></div>
-                </td>
-            <td>
-                <img id="img2" src="aprilla/pic2thumb.jpg">
-                </td>
-            <td>
-                <img id="img3" src="aprilla/pic3thumb.jpg">
-                </td>
-            <td>
-                <img id="img4" src="aprilla/pic4thumb.jpg">
-                </td>
-            <td>
-                <img id="img5" src="aprilla/pic5thumb.jpg">
-                </td>
-            <td>
-                <img id="img6" src="aprilla/pic6thumb.jpg">
-                </td>
-            </tr>
-        <tr>
-            <td>
-                <img id="img7" src="aprilla/pic7thumb.jpg">
-                </td>
-            <td>
-                <img id="img8" src="aprilla/pic8thumb.jpg">
-                </td>
-            <td>
-                <img id="img9" src="aprilla/pic9thumb.jpg">
-                </td>
-            <td>
-                <img id="img10" src="aprilla/pic10thumb.jpg">
-                </td>
-            <td>
-                <img id="img11" src="aprilla/pic11thumb.jpg">
-                </td>
-            <td>
-                <img id="img12" src="aprilla/pic12thumb.jpg">
-                </td>
-            </tr>
-        <tr>
-            <td>
-                <img id="img13" src="aprilla/pic13thumb.jpg">
-                </td>
-            <td>
-                <img id="img14" src="aprilla/pic14thumb.jpg">
-                </td>
-            <td>
-                <img id="img15" src="aprilla/pic15thumb.jpg">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    Search the art database using the fields below.
-    <form method="post" action="index1.html">
-        <pre>
-First Name:
+	<br>
+	<table>
+		<caption>Your Results:</caption>
+		<tbody>
+			<tr>
+			<td>
+				<img id="image1" src="aprilla/pic1thumb.jpg"><div id = "img1popin"></div>
+				</td>
+			<td>
+				<img src="aprilla/pic2thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic3thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic4thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic5thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic6thumb.jpg">
+				</td>
+				</tr>
+			<tr>
+			<td>
+				<img src="aprilla/pic7thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic8thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic9thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic10thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic11thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic12thumb.jpg">
+				</td>
+				</tr>
+			<tr>
+			<td>
+				<img src="aprilla/pic13thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic14thumb.jpg">
+				</td>
+			<td>
+				<img src="aprilla/pic15thumb.jpg">
+				</td>
+				</tr>
+			</tbody>
+		</table>
+	<br>
+	Search the art database using the fields below.
+	<form method="post" action="index1.html">
+	<pre>
+First Name
 <input type="text" name="firstname">
 <br>
-Last Name:
+Last Name
 <input type="text" name="lastname">
 <br>
 <input type="submit" value="SEARCH">
-        </pre>
-        </form>
-</body>
+		</pre>
+		</form>
+	</body>
 </html>
