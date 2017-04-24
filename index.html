@@ -27,7 +27,7 @@
 			img.id = image + 'popout';
 			img.innerHTML = "<br/><TABLE><TR><TH rowspan='3'><img src='aprilla/" + image + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + image + ".jpg<TR></TABLE>";
 			var popOut = document.getElementById(image + 'popout');
-			img.onmouseout = hideDetailedView(image);			
+			popOut.onmouseout = hideDetailedView(image);			
 		}
 		
 		function hideDetailedView(imagestr) {
