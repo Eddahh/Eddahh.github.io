@@ -31,13 +31,13 @@
 		}
 		
 		function hideDetailedView(imagestr) {
-			var img = document.getElementById(imagestr.concat('popout'));
+			var img = document.getElementById(imagestr + 'popout');
 			img.id = imagestr + 'popin';
 			img.innerHTML = ""; 
 		}
 		</script>
 	</head>
-<body onload='initPopout();'>
+<body onload='initPopout()'>
 	<br>
 	<table>
 		<caption>Your Results:</caption>
