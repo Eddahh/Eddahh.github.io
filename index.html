@@ -22,12 +22,18 @@
 		}
 
 		function showDetailedView(imagestr) {
-			var img = document.getElementById(imagestr.concat('popin'));
-			var artist = 'placeholder'
-			img.id = imagestr.concat('popout');
+			var img = document.getElementById(imagestr + 'popin');
+			var artist = 'placeholder';
+			img.id = imagestr + 'popout';
 			img.innerHTML = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + imagestr + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + imagestr + ".jpg<TR></TABLE> ";
-			var popOut = document.getElementById(imagestr.concat('popout'));
+			var popOut = document.getElementById(imagestr + 'popout');
 			popOut.onmouseout = hideDetailedView(imagestr);			
+		}
+		
+		function hideDetailedView(imagestr) {
+			var img = document.getElementById(imagestr.concat('popout'));
+			img.id = imagestr + 'popin';
+			img.innerHTML = ""; 
 		}
 		</script>
 	</head>
