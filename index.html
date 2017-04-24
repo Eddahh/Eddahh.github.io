@@ -29,12 +29,6 @@
 			var popOut = document.getElementById(imagestr.concat('popout'));
 			popOut.onmouseout = hideDetailedView(imagestr);			
 		}
-
-		function hideDetailedView(imagestr) {
-			var img = document.getElementById(imagestr.concat('popout'));
-			img.id = imagestr.concat('popin');
-			img.innerHTML = ""; 
-		}
 		</script>
 	</head>
 <body onload='initPopout();'>
