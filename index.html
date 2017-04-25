@@ -14,15 +14,21 @@
 			var thumb5 = document.getElementById('pic5');
 			var thumb6 = document.getElementById('pic6');
 			thumb1.onmouseover = showDetailedView('pic1');
+			thumb2.onmouseover = showDetailedView('pic2');
+			thumb3.onmouseover = showDetailedView('pic3');
+			thumb4.onmouseover = showDetailedView('pic4');
+			thumb5.onmouseover = showDetailedView('pic5');
+			thumb6.onmouseover = showDetailedView('pic6');
 		}
 
 		function showDetailedView(img) {
-			var img = img;
 			var popin = img + 'popin';
 			var popout = img + 'popout';
 			var div = document.getElementById(popin);
 			var artist = 'placeholder';
 			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + img + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + img + ".jpg<TR></TABLE> ";
+			var test = document.getElementById('test');
+			test.innerHTML = img + ' works';
 			div.id = popout;
 			div.innerHTML = htmlstr;
 			var popOut = document.getElementById(popout);
@@ -30,7 +36,6 @@
 		}
 		
 		function hideDetailedView(img) {
-			var img = img;
 			var popin = img + 'popin';
 			var popout = img + 'popout';
 			var div = document.getElementById(popout);
@@ -40,6 +45,7 @@
 		</script>
 	</head>
 <body onload='initPopout();'>
+	<p id = 'test'></p>
 	<br>
 	<table>
 		<caption>Your Results:</caption>
