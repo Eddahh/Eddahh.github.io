@@ -6,21 +6,6 @@
         <meta charset = 'utf-8' />
         <title>We Meta Now</title>
 	<script type = 'text/javascript'>
-		function initPopout() {
-			var thumb1 = document.getElementById('pic1'); 
-			var thumb2 = document.getElementById('pic2');
-			var thumb3 = document.getElementById('pic3');
-			var thumb4 = document.getElementById('pic4');
-			var thumb5 = document.getElementById('pic5');
-			var thumb6 = document.getElementById('pic6');
-			thumb1.onmouseover = showDetailedView('pic1');
-			thumb2.onmouseover = showDetailedView('pic2');
-			thumb3.onmouseover = showDetailedView('pic3');
-			thumb4.onmouseover = showDetailedView('pic4');
-			thumb5.onmouseover = showDetailedView('pic5');
-			thumb6.onmouseover = showDetailedView('pic6');
-		}
-
 		function showDetailedView(img) {
 			var popin = img + 'popin';
 			var popout = img + 'popout';
@@ -53,7 +38,7 @@
 		<tbody>
 			<tr>
 			<td>
-				<img id='pic1' src="aprilla/pic1thumb.jpg"><div id = 'pic1popin'></div>
+				<img id='pic1' src="aprilla/pic1thumb.jpg"><div id = 'pic1popin' onmouseover = "showDetailedView('pic1')" onmouseout = "hideDetailedView('pic1')"></div>
 				</td>
 			<td>
 				<img id='pic2' src="aprilla/pic2thumb.jpg"><div id = 'pic2popin'></div>
