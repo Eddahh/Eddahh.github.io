@@ -21,7 +21,7 @@
 			thumb6.onmouseover = showDetailedView('pic6');
 		}
 
-		function showDetailedView(image) {
+		function showDetailedView() {
 			var popin = image + 'popin';
 			var popout = image + 'popout';
 			var img = document.getElementById(popin);
@@ -33,7 +33,7 @@
 			popOut.onmouseout = hideDetailedView(image);			
 		}
 		
-		function hideDetailedView(image) {
+		function hideDetailedView() {
 			var popin = image + 'popin';
 			var popout = image + 'popout';
 			var img = document.getElementById(popout);
