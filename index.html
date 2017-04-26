@@ -13,7 +13,7 @@
 			var thumb4 = document.getElementById('pic4');
 			var thumb5 = document.getElementById('pic5');
 			var thumb6 = document.getElementById('pic6');
-			thumb1.onmouseover = showDetailedView1;
+			thumb1.onmouseover = showDetailedView1();
 			thumb2.onmouseover = showDetailedView('pic2');
 			thumb3.onmouseover = showDetailedView('pic3');
 			thumb4.onmouseover = showDetailedView('pic4');
@@ -33,21 +33,29 @@
 			popOut.onmouseout = hideDetailedView(img);
 		}
 		
-		function showDetailedView1 {
+		function showDetailedView1() {
 			var popin = 'pic1popin';
 			var popout = 'pic1popout';
 			var div = document.getElementById(popin);
 			var artist = 'placeholder';
-			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>pic1.jpg<TR></TABLE> ";
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Test<TR><TH align='left'>File Name: <TH align='left'>pic1.jpg<TR></TABLE> ";
 			div.id = popout;
 			div.innerHTML = htmlstr;
 			var popOut = document.getElementById(popout);
-			popOut.onmouseout = hideDetailedView(img);
+			popOut.onmouseout = hideDetailedView1();
 		}
 		
 		function hideDetailedView(img) {
 			var popin = img + 'popin';
 			var popout = img + 'popout';
+			var div = document.getElementById(popout);
+			div.id = popin;
+			div.innerHTML = ""; 
+		}
+		
+		function hideDetailedView1() {
+			var popin = 'pic1popin';
+			var popout = 'pic1popout';
 			var div = document.getElementById(popout);
 			div.id = popin;
 			div.innerHTML = ""; 
