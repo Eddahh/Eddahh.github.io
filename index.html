@@ -8,24 +8,24 @@
 	<script type = 'text/javascript'>
 		function initPopout() {
 			var thumb1 = document.getElementById('pic1'); 
-			thumb1.onmouseover = showDetailedView1;
+			thumb1.onmouseover = showView('pic1');
 		}
 		
-		function showDetailedView1() {
-			var popin = 'pic1popin';
-			var popout = 'pic1popout';
+		function showView(imagename) {
+			var popin = imagename + 'popin';
+			var popout = imagename + 'popout';
 			var div = document.getElementById(popin);
 			var artist = 'placeholder';
-			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Test<TR><TH align='left'>File Name: <TH align='left'>pic1.jpg<TR></TABLE> ";
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + imagename + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + imagename + ".jpg<TR></TABLE> ";
 			div.id = popout;
 			div.innerHTML = htmlstr;
 			var popOut = document.getElementById(popout);
-			popOut.onmouseout = hideDetailedView1;
+			popOut.onmouseout = hideView(imagename);
 		}
 		
-		function hideDetailedView1() {
-			var popin = 'pic1popin';
-			var popout = 'pic1popout';
+		function hideView(imagename) {
+			var popin = imagename + 'popin';
+			var popout = imagename + 'popout';
 			var div = document.getElementById(popout);
 			div.id = popin;
 			div.innerHTML = ""; 
