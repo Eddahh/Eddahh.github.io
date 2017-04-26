@@ -8,7 +8,7 @@
 	<script type = 'text/javascript'>
 		function initPopout() {
 			var thumb1 = document.getElementById('pic1'); 
-			thumb1.onmouseover = showDetailedView1();
+			thumb1.onmouseover = showDetailedView1;
 		}
 		
 		function showDetailedView1() {
@@ -20,7 +20,7 @@
 			div.id = popout;
 			div.innerHTML = htmlstr;
 			var popOut = document.getElementById(popout);
-			popOut.onmouseout = hideDetailedView1();
+			popOut.onmouseout = hideDetailedView1;
 		}
 		
 		function hideDetailedView1() {
@@ -33,7 +33,6 @@
 		</script>
 	</head>
 <body onload = 'initPopout();'>
-	<p id = 'test'></p>
 	<br>
 	<table>
 		<caption>Your Results:</caption>
