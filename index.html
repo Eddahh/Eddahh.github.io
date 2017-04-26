@@ -17,6 +17,8 @@
 			var div = document.getElementById(popin);
 			var artist = 'placeholder';
 			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + String(imagename) + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + String(imagename) + ".jpg<TR></TABLE> ";
+			var test = document.getElementById("test");
+			test.innerHTML = htmlstr;
 			div.id = popout;
 			div.innerHTML = htmlstr;
 			var popOut = document.getElementById(popout);
