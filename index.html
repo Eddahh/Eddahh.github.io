@@ -10,9 +10,11 @@
 			var thumb1 = document.getElementById('pic1'); 
 			var thumb2 = document.getElementById('pic2');
 			var thumb3 = document.getElementById('pic3');
+			var thumb4 = document.getElementById('pic4');
 			thumb1.onmouseover = showView1;
 			thumb2.onmouseover = showView2;
 			thumb3.onmouseover = showView3;
+			thumb4.onmouseover = showView4;
 		}
 		
 		function showView1() {
@@ -29,6 +31,7 @@
 			div.id = 'pic1popin';
 			div.innerHTML = ""; 
 		}
+		
 		function showView2() {
 			var div = document.getElementById('pic2popin');
 			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic2.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Jimothy Ferdinand<TR><TH align='left'>File Name: <TH align='left'>pic2.jpg<TR></TABLE> ";
@@ -43,6 +46,7 @@
 			div.id = 'pic2popin';
 			div.innerHTML = ""; 
 		}
+		
 		function showView3() {
 			var div = document.getElementById('pic3popin');
 			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic3.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Bernard 'The Big' Sanchez<TR><TH align='left'>File Name: <TH align='left'>pic3.jpg<TR></TABLE> ";
@@ -55,6 +59,21 @@
 		function hideView3() {
 			var div = document.getElementById('pic3popout');
 			div.id = 'pic3popin';
+			div.innerHTML = ""; 
+		}
+		
+		function showView4() {
+			var div = document.getElementById('pic4popin');
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic4.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Alphonse Wiggins<TR><TH align='left'>File Name: <TH align='left'>pic4.jpg<TR></TABLE> ";
+			div.id = 'pic4popout';
+			div.innerHTML = htmlstr;
+			var popOut = document.getElementById('pic4popout');
+			popOut.onmouseout = hideView3;
+		}
+		
+		function hideView4() {
+			var div = document.getElementById('pic4popout');
+			div.id = 'pic4popin';
 			div.innerHTML = ""; 
 		}
 		</script>
