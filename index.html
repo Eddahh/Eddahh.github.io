@@ -12,20 +12,20 @@
 		}
 		
 		function showView(imagename) {
-			var popin = imagename + 'popin';
-			var popout = imagename + 'popout';
+			var popin = String(imagename) + 'popin';
+			var popout = String(imagename) + 'popout';
 			var div = document.getElementById(popin);
 			var artist = 'placeholder';
-			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + imagename + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + imagename + ".jpg<TR></TABLE> ";
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + String(imagename) + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + String(imagename) + ".jpg<TR></TABLE> ";
 			div.id = popout;
 			div.innerHTML = htmlstr;
 			var popOut = document.getElementById(popout);
-			popOut.onmouseout = hideView(imagename);
+			popOut.onmouseout = hideView(String(imagename));
 		}
 		
 		function hideView(imagename) {
-			var popin = imagename + 'popin';
-			var popout = imagename + 'popout';
+			var popin = String(imagename) + 'popin';
+			var popout = String(imagename) + 'popout';
 			var div = document.getElementById(popout);
 			div.id = popin;
 			div.innerHTML = ""; 
@@ -33,6 +33,7 @@
 		</script>
 	</head>
 <body onload = 'initPopout();'>
+	<p id = "test"></p>
 	<br>
 	<table>
 		<caption>Your Results:</caption>
