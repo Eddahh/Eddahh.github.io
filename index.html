@@ -8,34 +8,58 @@
 	<script type = 'text/javascript'>
 		function initPopout() {
 			var thumb1 = document.getElementById('pic1'); 
-			thumb1.onmouseover = showView('pic1');
+			var thumb2 = document.getElementById('pic2');
+			var thumb3 = document.getElementById('pic3');
+			thumb1.onmouseover = showView1;
+			thumb2.onmouseover = showView2;
+			thumb3.onmouseover = showView3;
 		}
 		
-		function showView(imagename) {
-			var popin = String(imagename) + 'popin';
-			var popout = String(imagename) + 'popout';
-			var div = document.getElementById(popin);
-			var artist = 'placeholder';
-			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/" + String(imagename) + ".jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>" + artist + "<TR><TH align='left'>File Name: <TH align='left'>" + String(imagename) + ".jpg<TR></TABLE> ";
-			var test = document.getElementById("test");
-			test.innerHTML = htmlstr;
-			div.id = popout;
+		function showView1() {
+			var div = document.getElementById('pic1popin');
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Aprill Aronie<TR><TH align='left'>File Name: <TH align='left'>pic1.jpg<TR></TABLE> ";
+			div.id = 'pic1popout';
 			div.innerHTML = htmlstr;
-			var popOut = document.getElementById(popout);
-			popOut.onmouseout = hideView(String(imagename));
+			var popOut = document.getElementById('pic1popout');
+			popOut.onmouseout = hideView1;
 		}
 		
-		function hideView(imagename) {
-			var popin = String(imagename) + 'popin';
-			var popout = String(imagename) + 'popout';
-			var div = document.getElementById(popout);
-			div.id = popin;
+		function hideView1() {
+			var div = document.getElementById('pic1popout');
+			div.id = 'pic1popin';
+			div.innerHTML = ""; 
+		}
+		function showView2() {
+			var div = document.getElementById('pic2popin');
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic2.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Jimothy Ferdinand<TR><TH align='left'>File Name: <TH align='left'>pic2.jpg<TR></TABLE> ";
+			div.id = 'pic2popout';
+			div.innerHTML = htmlstr;
+			var popOut = document.getElementById('pic2popout');
+			popOut.onmouseout = hideView2;
+		}
+		
+		function hideView2() {
+			var div = document.getElementById('pic2popout');
+			div.id = 'pic2popin';
+			div.innerHTML = ""; 
+		}
+		function showView3() {
+			var div = document.getElementById('pic3popin');
+			var htmlstr = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic3.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Bernard 'The Big' Sanchez<TR><TH align='left'>File Name: <TH align='left'>pic3.jpg<TR></TABLE> ";
+			div.id = 'pic3popout';
+			div.innerHTML = htmlstr;
+			var popOut = document.getElementById('pic3popout');
+			popOut.onmouseout = hideView3;
+		}
+		
+		function hideView3() {
+			var div = document.getElementById('pic3popout');
+			div.id = 'pic3popin';
 			div.innerHTML = ""; 
 		}
 		</script>
 	</head>
 <body onload = 'initPopout();'>
-	<p id = "test"></p>
 	<br>
 	<table>
 		<caption>Your Results:</caption>
