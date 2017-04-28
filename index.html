@@ -7,8 +7,8 @@
         <title>We Meta Now</title>
 	<script type = 'text/javascript'>
 		function loadFunction() {
-			var button = document.getElelemtById('rolldice')
-			button.onclick = rollDice()
+			var button = document.getElelemtById('rolldice');
+			button.onclick = rollDice();
 		}
 		
 		function randNum(num) {
@@ -18,32 +18,32 @@
 		function rollDice() {
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
+			var die1 = document.getElementById('die1img');
+			var die2 = document.getElementById('die2img');
+			var die3 = document.getElementById('die3img');
 			var die1val = randNum(dicetype);
-			var die1 = document.getElementById('die1img')
-			var die2 = document.getElementById('die2img')
-			var die3 = document.getElementById('die3img')
-			var die1imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg'
+			var die1imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg';
 			if (dicenum >= 2) {
 				var die2val = randNum(dicetype);
-				var die2imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg'
+				var die2imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg';
 				if (dicenum == 3) {
 					var die3val = randNum(dicetype);
-					var die3imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg'
+					var die3imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg';
 					}
 				else {
-					var die3imgstr = 'diceimages/grey.jpg'
+					var die3imgstr = 'diceimages/grey.jpg';
 					}
 			}
 			else {
-				var die2imgstr = 'diceimages/grey.jpg'
+				var die2imgstr = 'diceimages/grey.jpg';
 				}
-			die1.src = die1imgstr
-			die2.src = die2imgstr
-			die3.src = die3imgstr
+			die1.src = die1imgstr;
+			die2.src = die2imgstr;
+			die3.src = die3imgstr;
 		}
 		</script>
 	</head>
-<body>
+<body onload='loadFunction()'>
 	<h1> Dice Roll! </h1>
 	<form id='numselect'>
 		<input type='radio' name='list1' value=1 checked> One <br>
