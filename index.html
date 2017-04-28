@@ -22,20 +22,20 @@
 			var die1 = document.getElementById('die1img')
 			var die2 = document.getElementById('die2img')
 			var die3 = document.getElementById('die3img')
-			var die1imgstr = dicetype + String(dicenum) + '.jpg'
+			var die1imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg'
 			if (dicenum >= 2) {
 				var die2val = randNum(dicetype);
-				var die2imgstr = dicetype + String(dicenum) + '.jpg'
+				var die2imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg'
 				if (dicenum == 3) {
 					var die3val = randNum(dicetype);
-					var die3imgstr = dicetype + String(dicenum) + '.jpg'
+					var die3imgstr = 'diceimages/' + dicetype + String(dicenum) + '.jpg'
 					}
 				else {
-					var die3imgstr = 'grey.jpg'
+					var die3imgstr = 'diceimages/grey.jpg'
 					}
 			}
 			else {
-				var die2imgstr = 'grey.jpg'
+				var die2imgstr = 'diceimages/grey.jpg'
 				}
 			die1.src = die1imgstr
 			die2.src = die2imgstr
