@@ -6,20 +6,54 @@
         <meta charset = 'utf-8' />
         <title>We Meta Now</title>
 	<script type = 'text/javascript'>
+		function loadFunction() {
+			var button = document.getElelemtById('rolldice')
+			button.onclick = rollDice()
+		}
 		
+		function randNum(num) {
+			return Math.floor(Math.random() * num) + 1;
+		}
+		
+		function rollDice() {
+			var dicenum = document.getElementById('numselect').value;
+			var dicetype = document.getElementById('diceselect').value;
+			var die1val = randNum(dicetype);
+			var die1 = document.getElementById('die1img')
+			var die2 = document.getElementById('die2img')
+			var die3 = document.getElementById('die3img')
+			var die1imgstr = dicetype + String(dicenum) + '.jpg'
+			if (dicenum >= 2) {
+				var die2val = randNum(dicetype);
+				var die2imgstr = dicetype + String(dicenum) + '.jpg'
+				if (dicenum == 3) {
+					var die3val = randNum(dicetype);
+					var die3imgstr = dicetype + String(dicenum) + '.jpg'
+					}
+				else {
+					var die3imgstr = 'grey.jpg'
+					}
+			}
+			else {
+				var die2imgstr = 'grey.jpg'
+				}
+			die1.src = die1imgstr
+			die2.src = die2imgstr
+			die3.src = die3imgstr
+		}
 		</script>
 	</head>
 <body>
 	<h1> Dice Roll! </h1>
 	<form id='numselect'>
-		<input type='radio' name='list1'> One <br>
-		<input type='radio' name='list1'> Two <br>
-		<input type='radio' name='list1'> Three <br>
+		<input type='radio' name='list1' value=1> One <br>
+		<input type='radio' name='list1' value=2> Two <br>
+		<input type='radio' name='list1' value=3> Three <br>
 		</form>
 	<button id='rolldice'> Roll Dice </button>
 	<form id='diceselect'>
-		<input type='radio' name='list2'> Six-Sided <br>
-		<input type='radio' name='list2'> Twenty-Sided <br>
+		<input type='radio' name='list2' value='six'> Six-Sided <br>
+		<input type='radio' name='list2' value='twenty'> Twenty-Sided <br>
 		</form>
 	<img src='diceimages/grey.jpg' id='die1img'>
 	<img src='diceimages/grey.jpg' id='die2img'>
