@@ -40,10 +40,12 @@
 			die1.src = die1imgstr;
 			die2.src = die2imgstr;
 			die3.src = die3imgstr;
+			document.getElementById('test').innerHTML = 'works'
 		}
 		</script>
 	</head>
 <body onload='loadFunction()'>
+	<p id='test'></p>
 	<h1> Dice Roll! </h1>
 	<form id='numselect'>
 		<input type='radio' name='list1' value=1 checked> One <br>
