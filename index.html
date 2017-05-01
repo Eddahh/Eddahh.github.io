@@ -7,7 +7,7 @@
         <title>We Meta Now</title>
 	<script type = 'text/javascript'>
 		function loadFunction() {
-			var button = document.getElelemtById('rolldice');
+			var button = document.getElementById('rolldice');
 			button.onclick = rollDice;
 		}
 		
@@ -40,11 +40,11 @@
 			die1.src = die1imgstr;
 			die2.src = die2imgstr;
 			die3.src = die3imgstr;
-			document.getElementById('test').innerHTML = 'works'
+			document.getElementById('test').innerHTML = 'works';
 		}
 		</script>
 	</head>
-<body onload='loadFunction;'>
+<body onload='loadFunction();'>
 	<p id='test'></p>
 	<h1> Dice Roll! </h1>
 	<form id='numselect'>
