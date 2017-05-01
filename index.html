@@ -27,18 +27,17 @@
 				if (dicenum == 3) {
 					var die3val = randNum(dicetype);
 					var die3imgstr = 'diceimages/' + dicetype + String(dice3val) + '.jpg';
-					}
-				else {
+				} else {
 					var die3imgstr = 'diceimages/grey.jpg';
-					}
 				}
-			else {
+			} else {
 				var die2imgstr = 'diceimages/grey.jpg';
-				}
+			}
 			die1.src = die1imgstr;
 			die2.src = die2imgstr;
 			die3.src = die3imgstr;
-			document.getElementById('test').innerHTML = 'works';
+			var test = document.getElementById('test');
+			test.innerHTML = 'works';
 		}
 		
 		function randNum(num) 
