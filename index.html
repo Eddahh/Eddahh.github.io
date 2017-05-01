@@ -3,17 +3,15 @@
 <head>
 	<link href='style.css' rel='stylesheet' type='text/css'/>
         <link href='Eddahh.github.io/Sloth.jpg' rel='icon' type='image/x-icon'/>
-        <meta charset='utf-8' />
+        <meta charset='utf-8'/>
         <title>We Meta Now</title>
 	<script>
-		function loadFunction() 
-		{
+		function loadFunction() {
 			var button = document.getElementById('rolldice');
 			button.onclick = rollDice;
 		}
 		
-		function rollDice() 
-		{
+		function rollDice() {
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
 			var die1 = document.getElementById('die1img');
@@ -40,8 +38,7 @@
 			test.innerHTML = 'works';
 		}
 		
-		function randNum(num) 
-		{
+		function randNum(num) {
 			return Math.floor(Math.random() * num) + 1;
 		}
 		</script>
