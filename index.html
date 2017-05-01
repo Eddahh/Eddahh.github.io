@@ -12,8 +12,20 @@
 		
 		function rollDice() {
 			var imgstrbase = 'diceimages/';
-			var dicenum = document.getElementById('numselect').value;
-			var dicetype = document.getElementById('diceselect').value;
+			var dicetype = ''
+			var dicenum = 0
+			if (document.getElementById('oneoption1').checked) {
+				dicenum = 1
+			} else if (document.getElementById('oneoption2').checked) {
+				dicenum = 2
+			} else {
+				dicenum = 3
+			}
+			if (document.getElementById('twooption1').checked) {
+				dicetype = 'six'
+			} else {
+				dicetype = 'twenty'
+			}
 			var die1val = randNum(dicetype);
 			var die1imgstr = imgstrbase.concat(dicetype, String(die1val), '.jpg');
 			var die2imgstr = '';
@@ -44,15 +56,15 @@
 <body onload='loadFunction()'>
 	<p id='test'> original </p>
 	<h1> Dice Roll! </h1>
-	<form id='numselect'>
-		<input type='radio' name='list1' value=1 checked> One <br>
-		<input type='radio' name='list1' value=2> Two <br>
-		<input type='radio' name='list1' value=3> Three <br>
+	<form>
+		<input id='oneoption1' type='radio' name='list1' value=1 checked> One <br>
+		<input id='oneoption2' type='radio' name='list1' value=2> Two <br>
+		<input id='oneoption3' type='radio' name='list1' value=3> Three <br>
 		</form>
 	<button id='rolldice' type='button'> Roll Dice </button>
-	<form id='diceselect'>
-		<input type='radio' name='list2' value='six' checked> Six-Sided <br>
-		<input type='radio' name='list2' value='twenty'> Twenty-Sided <br>
+	<form>
+		<input id='twooption1' type='radio' name='list2' value='six' checked> Six-Sided <br>
+		<input id='twooption2' type='radio' name='list2' value='twenty'> Twenty-Sided <br>
 		</form>
 	<img src='diceimages/grey.jpg' id='die1img'>
 	<img src='diceimages/grey.jpg' id='die2img'>
