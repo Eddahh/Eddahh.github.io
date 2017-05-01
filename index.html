@@ -12,19 +12,20 @@
 		}
 		
 		function rollDice() {
+			var imgstrbase = 'diceimages/'
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
 			var die1 = document.getElementById('die1img');
 			var die2 = document.getElementById('die2img');
 			var die3 = document.getElementById('die3img');
 			var die1val = randNum(dicetype);
-			var die1imgstr = 'diceimages/' + dicetype + String(dice1val) + '.jpg';
+			var die1imgstr = imgstrbase.concat(dicetype, String(dice1val), '.jpg');
 			if (dicenum >= 2) {
 				var die2val = randNum(dicetype);
-				var die2imgstr = 'diceimages/' + dicetype + String(dice2val) + '.jpg';
+				var die2imgstr = imgstrbase.concat(dicetype, String(dice2val), '.jpg');
 				if (dicenum == 3) {
 					var die3val = randNum(dicetype);
-					var die3imgstr = 'diceimages/' + dicetype + String(dice3val) + '.jpg';
+					var die3imgstr = imgstrbase.concat(dicetype, String(dice3val), '.jpg');
 				} else {
 					var die3imgstr = 'diceimages/grey.jpg';
 				}
