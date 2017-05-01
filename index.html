@@ -16,15 +16,15 @@
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
 			var die1val = randNum(dicetype);
-			var die1imgstr = imgstrbase.concat(dicetype, String(dice1val), '.jpg');
+			var die1imgstr = imgstrbase.concat(dicetype, String(die1val), '.jpg');
 			var die2imgstr = '';
 			var die3imgstr = '';
 			if (dicenum >= 2) {
 				var die2val = randNum(dicetype);
-				die2imgstr = imgstrbase.concat(dicetype, String(dice2val), '.jpg');
+				die2imgstr = imgstrbase.concat(dicetype, String(die2val), '.jpg');
 				if (dicenum == 3) {
 					var die3val = randNum(dicetype);
-					die3imgstr = imgstrbase.concat(dicetype, String(dice3val), '.jpg');
+					die3imgstr = imgstrbase.concat(dicetype, String(die3val), '.jpg');
 				} else {
 					die3imgstr = 'diceimages/grey.jpg';
 				}
