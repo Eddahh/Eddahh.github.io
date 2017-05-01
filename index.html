@@ -15,9 +15,6 @@
 			var imgstrbase = 'diceimages/'
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
-			var die1 = document.getElementById('die1img');
-			var die2 = document.getElementById('die2img');
-			var die3 = document.getElementById('die3img');
 			var die1val = randNum(dicetype);
 			var die1imgstr = imgstrbase.concat(dicetype, String(dice1val), '.jpg');
 			if (dicenum >= 2) {
@@ -32,11 +29,10 @@
 			} else {
 				var die2imgstr = 'diceimages/grey.jpg';
 			}
-			die1.src = die1imgstr;
-			die2.src = die2imgstr;
-			die3.src = die3imgstr;
-			var test = document.getElementById('test');
-			test.innerHTML = 'works';
+			document.getElementById('die1img')die1.src = die1imgstr;
+			document.getElementById('die2img').src = die2imgstr;
+			document.getElementById('die3img').src = die3imgstr;
+			document.getElementById('test').innerHTML = 'works';
 		}
 		
 		function randNum(num) {
@@ -44,7 +40,7 @@
 		}
 		</script>
 	</head>
-<body>
+<body onload='loadFunction();'>
 	<p id='test'> original </p>
 	<h1> Dice Roll! </h1>
 	<form id='numselect'>
@@ -52,7 +48,7 @@
 		<input type='radio' name='list1' value=2> Two <br>
 		<input type='radio' name='list1' value=3> Three <br>
 		</form>
-	<button type='button' onclick='rollDice()'> Roll Dice </button>
+	<button id='rolldice' type='button'> Roll Dice </button>
 	<form id='diceselect'>
 		<input type='radio' name='list2' value='six' checked> Six-Sided <br>
 		<input type='radio' name='list2' value='twenty'> Twenty-Sided <br>
