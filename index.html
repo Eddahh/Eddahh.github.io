@@ -11,10 +11,6 @@
 			button.onclick = rollDice;
 		}
 		
-		function randNum(num) {
-			return Math.floor(Math.random() * num) + 1;
-		}
-		
 		function rollDice() {
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
@@ -41,6 +37,10 @@
 			die2.src = die2imgstr;
 			die3.src = die3imgstr;
 			document.getElementById('test').innerHTML = 'works';
+		}
+		
+		function randNum(num) {
+			return Math.floor(Math.random() * num) + 1;
 		}
 		</script>
 	</head>
