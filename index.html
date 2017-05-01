@@ -6,12 +6,14 @@
         <meta charset='utf-8' />
         <title>We Meta Now</title>
 	<script>
-		function loadFunction() {
+		function loadFunction() 
+		{
 			var button = document.getElementById('rolldice');
 			button.onclick = rollDice;
 		}
 		
-		function rollDice() {
+		function rollDice() 
+		{
 			var dicenum = document.getElementById('numselect').value;
 			var dicetype = document.getElementById('diceselect').value;
 			var die1 = document.getElementById('die1img');
@@ -29,7 +31,7 @@
 				else {
 					var die3imgstr = 'diceimages/grey.jpg';
 					}
-			}
+				}
 			else {
 				var die2imgstr = 'diceimages/grey.jpg';
 				}
@@ -37,9 +39,10 @@
 			die2.src = die2imgstr;
 			die3.src = die3imgstr;
 			document.getElementById('test').innerHTML = 'works';
-		}
+			}
 		
-		function randNum(num) {
+		function randNum(num) 
+		{
 			return Math.floor(Math.random() * num) + 1;
 		}
 		</script>
