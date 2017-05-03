@@ -2,6 +2,10 @@ body {
   background-image: url('diceimages/background.jpg');
 }
 
+table {
+  width: 100%;
+}
+
 #form1 {
   background-color: #ffffff;
   margin: auto;
