@@ -59,18 +59,34 @@
 	</head>
 <body onload='loadFunction()'>
 	<h1> Dice Roll! </h1>
-	<form id='form1'>
-		<input id='oneoption1' type='radio' name='list1' value=1 checked> One <br>
-		<input id='oneoption2' type='radio' name='list1' value=2> Two <br>
-		<input id='oneoption3' type='radio' name='list1' value=3> Three <br>
-		</form>
-	<button id='rolldice' type='button'> Roll Dice </button>
-	<form id='form2'>
-		<input id='twooption1' type='radio' name='list2' value='six' checked> Six-Sided <br>
-		<input id='twooption2' type='radio' name='list2' value='twenty'> Twenty-Sided <br>
-		</form>
+	<table>
+		<tr>
+			<td>
+				<form id='form1'>
+					<fieldset>
+						<legend>Number of Dice</legend>
+						<input id='oneoption1' type='radio' name='list1' value=1 checked> One <br>
+						<input id='oneoption2' type='radio' name='list1' value=2> Two <br>
+						<input id='oneoption3' type='radio' name='list1' value=3> Three <br>
+						</fieldset>
+					</form>
+				</td>
+			<td>
+				<button id='rolldice' type='button'> Roll Dice </button>
+				</td>
+			<td>
+				<form id='form2'>
+					<fieldset>
+						<legend>Type of Dice</legend>
+						<input id='twooption1' type='radio' name='list2' value='six' checked> Six-Sided <br>
+						<input id='twooption2' type='radio' name='list2' value='twenty'> Twenty-Sided <br>
+						</fieldset>
+					</form>
+				</td>
+			</tr>
 	<img src='diceimages/grey.jpg' id='die1img'>
 	<img src='diceimages/grey.jpg' id='die2img'>
 	<img src='diceimages/grey.jpg' id='die3img'>
+		</table>
 	</body>
 </html>
