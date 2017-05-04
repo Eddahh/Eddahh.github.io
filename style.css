@@ -13,10 +13,17 @@ div {
   text-align: center;
 }
 
-h1 {
+a {
   text-align: center;
   font-size: 50px;
   margin: 20px;
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 #form1 {
