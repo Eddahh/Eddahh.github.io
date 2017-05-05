@@ -1,19 +1,19 @@
-body {
+body { /* sets background image */
   background-image: url('diceimages/background.jpg');
 }
 
-table {
+table { /* centers the table element on the webpage, and centers elements inside of the table */
   width: 50%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-div {
+div { /* centers items in the div element */
   text-align: center;
 }
 
-a {
+a { /* text centered, font size mirrors the properties of the h1 element */
   text-align: center;
   font-size: 50px;
   margin: 20px;
@@ -27,21 +27,14 @@ a {
   color: #000000;
 }
 
-#form1 {
+form { /* background set, width and border added */
   background-color: #ffffff;
   margin: auto;
   width: 150px;
   border: 5px #000000;
 }
 
-#form2 {
-  background-color: #ffffff;
-  margin: auto;
-  width: 150px;
-  border: 5px #000000;
-}
-
-#rolldice {
+button { /* button dimensions established, font customization */
   width: 200px;
   height: 50px;
   font-family: 'Courier';
